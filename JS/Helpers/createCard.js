@@ -118,8 +118,9 @@ const createCard = (cardData) => {
     // anchor.appendChild(prueba);
 
     // Add styles to elements
-    card.classList.add('mentorCard');
-    card.classList.add('card', 'm-3');
+    // card.classList.add('mentorCard');
+    anchor.classList.add('cardAnchor', 'm-3')
+    card.classList.add('card');
     imgCover.classList.add('card-img-top');
     divCardBody.classList.add('card-body');
     divCardUserDetails.classList.add('card__userDetails', 'd-flex', 'align-items-center', 'mb-2');
