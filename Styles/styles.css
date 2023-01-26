@@ -574,4 +574,41 @@ body main .page-container .page__rightColumn {
   body main .page-container .page__centerColumn {
     width: 100%;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+.post-img-icons {
+  width: 30px;
+  height: 30px;
+}
+.tachita {
+  width: 30px;
+  height: 30px;
+}
+.menu-accion-ul{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  
+}
+.form-control-post {
+  height: 220px;
+  width: 100%;
+  border: none;
+}
+.ul-edit-review-post{
+  list-style-type: none;
+}
+
+.header-post{
+  display: flex;
+  justify-content: space-evenly;
+}
+.aside-post{
+  height: 30%;
+}
+.noshow{
+  color: transparent;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */
