@@ -21,10 +21,10 @@ const insertaCards = (data) => {
     const articlesArray = parseInfo(data);
     articlesArray.forEach(article =>{
         const newCard = createCard(article);
-        console.log(newCard);
+        //console.log(newCard);
         cardsContainer.appendChild(newCard);
     });
-    console.log(articlesArray);
+    //console.log(articlesArray);
 }
 
 

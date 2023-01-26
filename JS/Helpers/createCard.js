@@ -1,6 +1,6 @@
 const createCard = (cardData) => {
 
-    console.log(cardData);
+    //console.log(cardData);
     //Create DOM elements
     const anchor = document.createElement('a');
     const card = document.createElement('article');
@@ -22,8 +22,12 @@ const createCard = (cardData) => {
     const divCntLikeComment = document.createElement('div');
     const divCntReactions = document.createElement('div');
     const divCntComments = document.createElement('div');
-    const iconBtn = document.createElement('img');
+    const iconBtnReact = document.createElement('img');
+    const iconBtnLike = document.createElement('img');
+    const iconBtnSave = document.createElement('img');
     const pTextBtn = document.createElement('p');
+    const pTextBtnReact = document.createElement('p');
+    const pTextBtnSave = document.createElement('p');
     const divCntSave = document.createElement('div');
 
     //Nesting elements
@@ -34,6 +38,52 @@ const createCard = (cardData) => {
     card.appendChild(imgCover);
     card.appendChild(hTitle);
     anchor.appendChild(card);
+    card.appendChild(divCardBody);
+    divCardBody.classList.add('card-body');
+    divCardBody.appendChild(divCardUserDetails);
+    divCardUserDetails.classList.add('card__userDetails', 'd-flex', 'align-items-center', 'mb-2');
+    divCardUserDetails.appendChild(imgProfilePic);
+    divCardUserDetails.appendChild(divContainerNameDate);
+    divContainerNameDate.classList.add('d-flex', 'flex-column');
+    divContainerNameDate.appendChild(pName);
+    pName.classList.add('fw-bold');
+    divContainerNameDate.appendChild(pDate);
+    pDate.textContent = cardData.date;
+    pDate.classList.add('time');
+    divCardBody.appendChild(hTitle);
+    hTitle.classList.add('card-title', 'ms-4');
+    divCardBody.appendChild(tagList);
+    tagList.classList.add('d-flex', 'flex-wrap', 'p-0' ,'ms-4');
+    tagList.appendChild(anchorTag)
+    cardData.tags.forEach(tag => {
+        anchorTag.appendChild(liTag);
+        liTag.textContent = tag;
+    });
+    divCardBody.appendChild(divContainerBtns);
+    divContainerBtns.classList.add('card__buttons', 'd-flex', 'ms-4');
+    divContainerBtns.appendChild(divCntLikeComment);
+    divCntLikeComment.classList.add('interactions', 'd-flex');
+    divCntLikeComment.appendChild(divCntReactions);
+    divCntReactions.classList.add('reactions', 'd-flex', 'me-4');
+    divCntReactions.appendChild(iconBtnLike);
+    iconBtnLike.src = './Assets/iconos/like.svg';
+    divCntReactions.appendChild(pTextBtn);
+    divCntReactions.classList.add('reactions', 'd-flex', 'me-4');
+    pTextBtn.textContent = '118 reactions';
+    divCntReactions.appendChild(divCntComments);
+    divCntComments.classList.add('comments', 'd-flex');
+    divCntComments.appendChild(iconBtnReact);
+    iconBtnReact.src = './Assets/iconos/comment.svg';
+    divCntComments.appendChild(pTextBtnReact);
+    pTextBtnReact.textContent = '9 Comments';
+    divContainerBtns.appendChild(divCntSave);
+    divCntSave.classList.add('tools', 'd-flex');
+    divCntSave.appendChild(iconBtnSave);
+    iconBtnSave.src = './Assets/iconos/save.svg';
+    pTextBtnSave.textContent = '3 min read';
+    divCntSave.appendChild(pTextBtnSave);
+
+
     //
     // anchor.appendChild(card);
     // card.appendChild(divCardBody);
