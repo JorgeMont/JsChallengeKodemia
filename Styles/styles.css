@@ -129,6 +129,20 @@ body header {
   top: 0;
   z-index: 1;
 }
+body header #btnCreate {
+  color: #4891fc;
+  border: 1px solid #4891fc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.7rem;
+  text-decoration: none;
+}
+body header #btnCreate:hover {
+  cursor: pointer;
+  background-color: #0d6efd;
+  color: white;
+}
 body header nav .crayons-header__logo {
   display: flex;
 }
