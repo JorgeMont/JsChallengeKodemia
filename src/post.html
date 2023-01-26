@@ -170,26 +170,25 @@
 
 
         <div class="container bootstrap snippets bootdey">
-            <div class="input-group d-flex justify-content-around row header-post">
+            <div class=" row ">
                 <div class="logoContainer col-1">
                     <a href="../index.html">
                       <img src="../Assets/Imagenes/logo.png" alt="logo" />
                     </a>
                   </div>
-                  <div>
+                  <div class="col-1">
                     <span>Create Post</span>
                   </div>
-                  <div class="d-flex justify-content-end">
+                  
                     <div class="col-8">
                   <nav col-4>
-                    <ul class="ul-edit-review-post">
-                        <li><button>Edit</button></li>
-                        <li><button>Preview</button></li>
+                    <ul class="d-flex  ul-edit-review-post">
+                        <li class="li-edit-review-post "><button class="hover-button">Edit</button></li>
+                        <li class="li-edit-review-post"><button class="hover-button">Preview</button></li>
                     </ul>
                   </nav>
                 </div>
-                </div>
-                <div>
+                <div class="col-1">
                     <button id="tachita">
                         <img src="../Assets/iconos/cross-svgrepo-com.svg" alt="tachita"
                         class="tachita">
@@ -198,12 +197,32 @@
               
             </div>
             <div class="row ">
-                <div class="col-md-offset-3 col-md-6 col-xs-12">
+                <div class="col-md-offset-3 col-md-6 col-xs-12 col-8" >
                     <div class="well well-sm well-social-post">
                 <form>
-                    <label for="">Add a cover image</label>
-                    <textarea class="form-control-post" placeholder="New post title here" id="textarea-arriba"></textarea>
+                    <div id="label-cover-image" style="background-color: white;">
+                      <input type="text" name="" id="" style="border: none; background-color: white; color:gray; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)" value="Add a cover image">
+                    
+                </div>
+                    <textarea class="form-control-post" placeholder="New post title here" id="textarea-arriba">
+                        
+                    </textarea>
+                    <!-- <textarea class="form-control-post" placeholder="New post title here" id="textarea-tags"></textarea> -->
+                    <div class="form-floating">
+                      <select class="form-select " id="textarea-tags" aria-label="Floating label select example">
+                        <option selected></option>
+                        <option value="1">#webdev</option>
+                        <option value="2">#javascript</option>
+                        <option value="3">#beginners</option>
+                        <option value="4">#programming</option>
+                        <option value="5">#tutorial</option>
+                        <option value="">#react</option>
+                      </select>
+                      <label for="floatingSelect">Add up to 4 tags...</label>
+                    </div>
+                    
                     <ul class='menu-accion-ul'>
+                        
                         
                         <li><img src="../Assets/iconos/bod-strong.svg" alt="bold" class="post-img-icons" ></a></li>
                         <li><img src="../Assets/iconos/italic-svgrepo-com.svg" alt="italic" class="post-img-icons" ></a></li>
@@ -229,8 +248,8 @@
                 </form>
                     </div>
                 </div>
-                <div class="col-6">
-                <aside class="col-6">
+                <div class="col-4">
+                <aside id="post-title" class="col-6 togglevista" >
                     <h3>Writing a Great Post Title</h3>
                     <p>    Think of your post title as a super short (but compelling!) description — like an overview of the actual post in one short sentence.
                         Use keywords where appropriate to help ensure people can find your post by search.
@@ -238,8 +257,8 @@
                     </p>
                     
                 </aside>
-                <aside class="noshow">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, voluptatum earum aliquam sint libero quidem. Fugiat dicta accusantium, delectus nemo ut quaerat ducimus error totam?</aside>
-                <aside >
+                
+                <aside id="tags"  class="col-6 togglevista" onclick="buttonPressed()">
                     <h3>Tagging Guidelines</h3>
                     <p>Tags help people find your post.     Think of tags as the topics or categories that best describe your post.
                         Add up to four comma-separated tags per post. Combine tags to reach the appropriate subcommunities.
@@ -247,8 +266,8 @@
                         Some tags, such as “help” or “healthydebate”, have special posting guidelines.
                     
                     </p></aside>
-                <aside class="noshow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui fuga praesentium earum consectetur ipsam nesciunt, necessitatibus accusamus distinctio, optio exercitationem, dolore quaerat sequi. Cum?</aside>
-                <aside>
+                
+                <aside id="editor-basics" class="col-6 togglevista">
                     <h3>Editor Basics</h3>
                     <p>    Use <span>Markdown</span> to write and format posts.</p>
                     <details>
@@ -331,10 +350,37 @@
         const tachita = document.querySelector('#tachita');
         
         tachita.addEventListener('click', ()=>{
-            if(confirm('Are you sure you want to leave?')){
+            if(confirm(`You've made changes to your post. Do you want to navigate to leave this page?`)){
                 window.location.href = '../index.html';
             }
         })
+
+        
+  const postTitle = document.getElementById('post-title');
+  const postTags = document.getElementById('tags');
+  const editorBasics = document.getElementById('editor-basics');
+  const textareaDesc = document.getElementById('textarea-desc');
+  const textareaTags = document.getElementById('textarea-tags');
+  const textareaArriba = document.getElementById('textarea-arriba');
+  const laberCover = document.getElementById('label-cover-image');
+  
+//   postTitle.addEventListener('click', ( ) =>{
+//     classList.toggle('togglevista');
+//   })
+
+const buttonPressed = (e) => {
+  e.target.classList.toggle("untogglevista");
+}
+textareaArriba.addEventListener("click", ()=>{
+    postTitle.classList.toggle("untogglevista")
+});
+textareaTags.addEventListener("click", ()=>{
+    postTags.classList.toggle("untogglevista")
+});
+
+textareaDesc.addEventListener("click", ()=>{
+    editorBasics.classList.toggle("untogglevista")
+});
 
 
     </script>
