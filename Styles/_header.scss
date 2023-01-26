@@ -5,14 +5,33 @@ body{
         position: sticky;
         top: 0;
         z-index: 1;
+
+        #btnCreate{
+            color: #4891fc;
+            border: 1px solid #4891fc;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 0 0.7rem;
+            text-decoration: none;
+
+            &:hover{
+                cursor: pointer;
+                background-color: #0d6efd;
+                color: white;
+            }
+        }
+
         nav{
             
             .crayons-header__logo{
                 display: flex;
             }
             .header__search{
+
                 width: 100%;
                     form {
+                        
                     .input-group{
                         border: 1px solid #ced4da;
                         border-radius: 5px;
@@ -24,6 +43,7 @@ body{
                             background-color: white;
                             border: none;
                         }
+                        
                     }
                     }
             }
