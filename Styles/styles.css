@@ -533,6 +533,97 @@ footer {
   color: #4550bb;
 }
 
+#nav-btns ul {
+  border: 1px solid;
+}
+#nav-btns a {
+  background-color: #fef5e6;
+}
+
+#sort-comment-container {
+  display: grid;
+  grid-template-columns: 33% 67%;
+}
+#sort-comment-container select {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+#sort-comment-container ul img {
+  margin-left: 5px;
+}
+#sort-comment-container ul li {
+  border: 1px solid;
+  padding: 5px 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment-container input {
+  width: 85%;
+  margin-left: 5%;
+  height: 100px;
+  display: flex;
+  border-radius: 5px;
+}
+.comment-container .comment-content {
+  border: 1px solid grey;
+  width: 85%;
+  margin-left: 5%;
+  height: 100px;
+  border-radius: 5px;
+}
+.comment-container .comment-content h6 {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-weight: bold;
+}
+.comment-container .comment-content a {
+  font-weight: bold;
+  margin-right: 2%;
+}
+.comment-container .comment-content #comment {
+  margin-left: 2%;
+}
+.comment-container .comment-reactions {
+  margin-left: 5%;
+}
+
+#expert-section img {
+  margin: 5% 5% 5% 5%;
+}
+#expert-section h3 {
+  margin-left: 5%;
+  font-weight: bold;
+}
+#expert-section p {
+  margin-left: 5%;
+  font-size: 20px;
+}
+#expert-section p a {
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+}
+
+#read-next-section h3 {
+  margin-left: 5%;
+}
+#read-next-section img {
+  border-radius: 50%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+#read-next-section h6 {
+  margin-top: 2%;
+}
+#read-next-section p {
+  margin-left: -17%;
+}
+
 body {
   background-color: #f8f8f2;
 }
