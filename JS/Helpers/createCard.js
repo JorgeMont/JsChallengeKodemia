@@ -43,6 +43,7 @@ const createCard = (cardData) => {
     card.appendChild(imgCover);
     card.appendChild(hTitle);
     anchor.appendChild(card);
+    anchor.href = `./src/article.html?id=${cardData.id}`;
     card.appendChild(divCardBody);
     divCardBody.classList.add('card-body');
     divCardBody.appendChild(divCardUserDetails);
@@ -120,6 +121,8 @@ const createCard = (cardData) => {
     // Add styles to elements
     // card.classList.add('mentorCard');
     anchor.classList.add('cardAnchor', 'm-3')
+    // anchor.href = 'https://getbootstrap.com/docs/4.0/utilities/spacing/';
+    
     card.classList.add('card');
     imgCover.classList.add('card-img-top');
     divCardBody.classList.add('card-body');
