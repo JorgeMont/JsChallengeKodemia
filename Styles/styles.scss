@@ -6,6 +6,7 @@
 @import 'mongoArticle';
 @import 'navigation';
 @import 'listings';
+@import 'post';
 
 body{
     background-color: #f8f8f2;
@@ -22,7 +23,7 @@ body{
             }
 
             .page__centerColumn{
-                width: 50%;
+                width: 48%;
                 .tabContainer{
                     &:hover{
                         cursor: pointer;
