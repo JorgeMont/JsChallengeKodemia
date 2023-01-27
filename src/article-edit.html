@@ -202,8 +202,8 @@
         <nav class="navbar bg-body-tertiary border-bottom">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="/JsChallengeKodemia/Assets/Imagenes/profile-picture.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                Czrvelasquez <br> <p class="fw-light fs-6"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Posted on nov 15t</p>
+                <img src="/JsChallengeKodemia/Assets/Imagenes/vincent.webp" alt="Logo" width="40" height="40" class="d-inline-block align-text-top" style="border-radius: 50%;">
+                Vincent Will <br> <p class="fw-light fs-6"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Posted on nov 15</p>
               </a>
               <div >
                 <ul class="d-flex" id="nav-btns">
@@ -215,18 +215,18 @@
            
             </div>
             <div>
-                <h2>this is the Article title  </h2>
+                <h2>Weekly web development resources #124  </h2>
                 <p class="fw-light"> Thi is the content of the article which can be edited</p>
             </div>
           </nav>
         
         <div class="card-body" id="sort-comment-container">
           <div class="container-fluid d-flex flex-row" >
-            <h5>Sort Comments</h5>
-            <select name="sort-comments" id="">
-                <option value="1">Top</option>
-                <option value="2">Latest</option>
-                <option value="3">Oldest</option>
+            <h5><span id="sort-span"> Sort </span> Comments (1) </h5>
+            <select name="sort-comments" id="sort-comments-selector">
+                <option value="1" id="top">Top</option>
+                <option value="2" id="latest">Latest</option>
+                <option value="3" id="oldest">Oldest</option>
             </select>
            
           </div>
@@ -242,7 +242,7 @@
             <input type="text" placeholder="Add to the discussion" id="description-box">
         </div>
         <div class="comment-container">
-            <img src="/JsChallengeKodemia/Assets/Imagenes/profile-picture.png" alt="" width="30px" height="30px">
+            <img src="/JsChallengeKodemia/Assets/Imagenes/perfil1.PNG" alt="" width="30px" height="30px" style="margin-top: 2%;">
             <div class="comment-content">
                 <div class="comment-nav d-flex justify-content-between">
                     <h6>Czrvelasquez </h6> 
@@ -274,19 +274,19 @@
       <div class="card container-fluid pt-4" id="read-next-section">
         <h3>Read next</h3>
         <div class="d-flex">
-            <img src="/JsChallengeKodemia/Assets/Imagenes/vincent.webp" alt="" width="50px" height="50px">
-            <h6>This is an article title <br></h6>
-            <p><br> <br> Posted by Vince - Jan 25</p>
+            <img src="/JsChallengeKodemia/Assets/Imagenes/perfil1.PNG" alt="" width="50px" height="50px">
+            <h6>Byte Type Array in Solidity <br></h6>
+            <p><br> <br>Shlok Kumar - Jan 25</p>
+        </div>
+        <div class="d-flex">
+            <img src="/JsChallengeKodemia/Assets/Imagenes/perfil2.PNG" alt="" width="50px" height="50px">
+            <h6>From zone.js to zoneñess Angular and back -- how it all works<br></h6>
+            <p id="next-date1"><br> <br> Max - Jan 25</p>
         </div>
         <div class="d-flex">
             <img src="/JsChallengeKodemia/Assets/Imagenes/vincent.webp" alt="" width="50px" height="50px">
-            <h6>This is another article title <br></h6>
-            <p><br> <br> Posted by Vince - Jan 25</p>
-        </div>
-        <div class="d-flex">
-            <img src="/JsChallengeKodemia/Assets/Imagenes/vincent.webp" alt="" width="50px" height="50px">
-            <h6>This is a third article title <br></h6>
-            <p><br> <br> Posted by Vince - Jan 25</p>
+            <h6>How to use Parse Arguments in Your Ruby C Extension <br></h6>
+            <p id="next-date2"><br> <br> Ulysse Buonomo - Jan 24</p>
         </div>
       </div>
       </div>
@@ -353,5 +353,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="/JsChallengeKodemia/src/article-edit.js"></script>
   </body>
 </html>

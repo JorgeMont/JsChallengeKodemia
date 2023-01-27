@@ -619,9 +619,18 @@ footer {
 }
 #read-next-section h6 {
   margin-top: 2%;
+  margin-left: 1%;
+  font-weight: bold;
+  font-size: 20px;
 }
 #read-next-section p {
-  margin-left: -17%;
+  margin-left: -32%;
+}
+#read-next-section #next-date1 {
+  margin-left: -78%;
+}
+#read-next-section #next-date2 {
+  margin-left: -69%;
 }
 
 body {
