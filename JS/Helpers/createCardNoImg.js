@@ -6,7 +6,7 @@ const createLiTag = (tagText) => {
     return liTag;
 }
 
-const createCard = (cardData) => {
+const createCardNoImg = (cardData) => {
 
     //console.log(cardData);
     //Create DOM elements
@@ -63,7 +63,7 @@ const createCard = (cardData) => {
     // Inserting tags
     cardData.tags.forEach(tag => {
         const newli = createLiTag(tag);
-        console.log(newli);
+        // console.log(newli);
         tagList.appendChild(newli);
     });
     divCardBody.appendChild(divContainerBtns);
@@ -94,7 +94,7 @@ const createCard = (cardData) => {
     anchor.classList.add('cardAnchor', 'm-3')
     
     card.classList.add('card');
-    imgCover.classList.add('card-img-top');
+    imgCover.classList.add('no-mostrar-img');
     divCardBody.classList.add('card-body');
     divCardUserDetails.classList.add('card__userDetails', 'd-flex', 'align-items-center', 'mb-2');
     divContainerNameDate.classList.add('d-flex', 'flex-column');
@@ -111,4 +111,4 @@ const createCard = (cardData) => {
     return anchor;
 }
 
-export default createCard;
+export default createCardNoImg;

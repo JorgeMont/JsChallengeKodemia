@@ -1,5 +1,5 @@
 import getData from "./Helpers/getData.js";
-import postData from "./Helpers/postData.js"
+import createCardNoImg from "./Helpers/createCardNoImg.js";
 import createCard from "./Helpers/createCard.js";
 
 const cardsContainer = document.querySelector('#articlesContainer');
@@ -19,26 +19,19 @@ const parseInfo = (data) => {
 
 const insertaCards = (data) => {
     const articlesArray = parseInfo(data);
-    articlesArray.forEach(article =>{
-        const newCard = createCard(article);
-        //console.log(newCard);
-        cardsContainer.appendChild(newCard);
+    articlesArray.forEach((article, index) =>{
+        if(index > 0){
+            //Insertalo sin imagen
+            const newCard = createCardNoImg(article);
+            cardsContainer.appendChild(newCard);
+        }
+        else{
+            //Insertalo normal
+            const newCard = createCard(article);
+            cardsContainer.appendChild(newCard);
+        }
     });
-    //console.log(articlesArray);
 }
-
-
-// postData(apiURL, {nombre: 'Aldo'});
-
-// postData(apiURL,
-//     {
-//                 titulo: 'Titulo 3',
-//                 content: 'Lorem 3',
-//                 date: '3/2/2023', 
-//                 coverImage: "http://4.bp.blogspot.com/-ogp9dmigd-M/UJPCwyUloPI/AAAAAAAAFKA/GhEzv5AJ_mA/s1600/pato.jpg",
-//                 tags: ['js', 'tutorial', 'code'],
-//             }
-//     );
 
 getData(apiURL, insertaCards);
 

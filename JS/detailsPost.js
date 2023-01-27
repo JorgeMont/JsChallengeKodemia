@@ -41,7 +41,7 @@ inputImgUrl.addEventListener('change',()=>{
 formPost.addEventListener('submit', (ev)=>{
     let newEntrada = {titulo: tituloTex, content: contentText, date: dateText, coverImage: imgUrlText, tags: ['js', 'tutorial', 'code']};
     ev.preventDefault();
-    console.log(newEntrada);
+    // console.log(newEntrada);
     validaCampos(newEntrada);
     if(!validaCampos(newEntrada)){
         postData(apiURL, newEntrada);

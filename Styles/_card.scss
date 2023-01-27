@@ -54,6 +54,10 @@ body{
                     height: 15rem;
                     object-fit: cover;
                 }
+
+                .no-mostrar-img{
+                    display: none;
+                }
     
                 .card__userDetails{
                     img{

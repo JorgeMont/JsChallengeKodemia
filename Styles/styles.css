@@ -234,6 +234,9 @@ body main .cardAnchor .card .card-img-top {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body main .cardAnchor .card .no-mostrar-img {
+  display: none;
+}
 body main .cardAnchor .card .card__userDetails img {
   width: 2rem;
   height: 2rem;
