@@ -2,6 +2,8 @@ import getData from "./Helpers/getData.js";
 import createCardNoImg from "./Helpers/createCardNoImg.js";
 import createCard from "./Helpers/createCard.js";
 
+import articlesData from "../mockData.js";
+
 const cardsContainer = document.querySelector('#articlesContainer');
 const apiURL = 'https://jschallengekodemia-default-rtdb.firebaseio.com/.json';
 
@@ -18,7 +20,8 @@ const parseInfo = (data) => {
 }
 
 const insertaCards = (data) => {
-    const articlesArray = parseInfo(data);
+    // const articlesArray = parseInfo(data);
+    const articlesArray = data
     articlesArray.forEach((article, index) =>{
         if(index > 0){
             //Insertalo sin imagen
@@ -33,5 +36,6 @@ const insertaCards = (data) => {
     });
 }
 
-getData(apiURL, insertaCards);
+// getData(apiURL, insertaCards);
+insertaCards(articlesData);
 
