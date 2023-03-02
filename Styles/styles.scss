@@ -9,10 +9,10 @@
 @import 'post';
 
 body{
-    background-color: #f8f8f2;
+    background-color: $grey-background;
     font-family: $font-sans-serif;
     main{
-        background-color: #f8f8f2;
+        background-color: $grey-background;
 
         .page-container{
             padding: 1rem;
