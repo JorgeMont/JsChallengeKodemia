@@ -5,7 +5,9 @@ import createCard from "./Helpers/createCard.js";
 import articlesData from "../mockData.js";
 
 const cardsContainer = document.querySelector('#articlesContainer');
-const apiURL = 'https://jschallengekodemia-default-rtdb.firebaseio.com/.json';
+// const apiURL = 'https://jschallengekodemia-default-rtdb.firebaseio.com/.json';
+const apiURL = 'http://localhost:3000/api/v1/posts';
+//dominio de Railway/api/v1
 
 const parseInfo = (data) => {
     const asArray = Object.entries(data);
@@ -20,9 +22,10 @@ const parseInfo = (data) => {
 }
 
 const insertaCards = (data) => {
-    // const articlesArray = parseInfo(data);
-    const articlesArray = data
-    articlesArray.forEach((article, index) =>{
+    console.log('/////');
+    console.log(data);
+    // Recorre arreglo de objetos con la info de los posts
+    data.forEach((article, index) =>{
         if(index > 0){
             //Insertalo sin imagen
             const newCard = createCardNoImg(article);
@@ -30,12 +33,15 @@ const insertaCards = (data) => {
         }
         else{
             //Insertalo normal
+            console.log(article);
             const newCard = createCard(article);
             cardsContainer.appendChild(newCard);
         }
     });
 }
 
-// getData(apiURL, insertaCards);
-insertaCards(articlesData);
+// getData(apiURL, dameDatos);
+ getData(apiURL, insertaCards);
+
+// insertaCards(articlesData);
 
