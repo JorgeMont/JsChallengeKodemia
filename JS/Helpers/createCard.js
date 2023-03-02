@@ -39,7 +39,7 @@ const createCard = (cardData) => {
     //
     imgCover.src = cardData.coverImage;
     imgCover.classList.add('card-img-top');
-    hTitle.textContent = cardData.titulo;
+    hTitle.textContent = cardData.title;
     card.appendChild(imgCover);
     card.appendChild(hTitle);
     anchor.appendChild(card);

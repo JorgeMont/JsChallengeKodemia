@@ -124,7 +124,6 @@ footer .logoContainer:hover {
 }
 
 body header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -474,7 +473,6 @@ body main .cardAnchor .card .card__userDetails .time {
 @media screen and (min-width: 1024px) {
   .main__cards #main__column-3 #main__article {
     width: 100%;
-    position: -webkit-sticky;
     position: sticky;
     top: 75px;
   }
@@ -634,6 +632,7 @@ footer {
 
 body {
   background-color: #f8f8f2;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 body main {
   background-color: #f8f8f2;

@@ -1,3 +1,4 @@
+
 const getData = async(api, handleFunction) => {
     try{
         const response = await fetch(api);
@@ -8,5 +9,9 @@ const getData = async(api, handleFunction) => {
         return(error);
     }
 }
+
+// const getData = (api, handleFunction) => {
+//     return handleFunction();
+// }
 
 export default getData;

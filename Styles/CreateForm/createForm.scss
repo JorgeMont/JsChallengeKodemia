@@ -1,0 +1,56 @@
+@import '../variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f8f8f2;
+    font-family: $font-sans-serif;
+
+    header{
+        padding: 0.5rem;
+
+        .navCreate{
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            
+            .navLogo{
+                // width: 3.5rem;
+                img{
+                    width: 3rem;
+                }
+            }
+
+            p{
+                margin-left: 1rem;
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+
+    #formPost{
+        .formPost__card{
+            margin-left: 5rem;
+            padding: 2rem 4rem;
+            background-color: white;
+            width: 50rem;
+            border: 1px solid #e4e4e4;
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: column;
+
+            input{
+                margin: 1rem 0;
+            }
+        }
+
+        button{
+            margin-left: 5rem;
+        }
+    }
+}
