@@ -28,7 +28,6 @@ const insertaCards = (data) => {
         }
         else{
             //Insertalo normal
-            console.log(article);
             const newCard = createCard(article);
             cardsContainer.appendChild(newCard);
         }

@@ -20,7 +20,6 @@ const createTag = (tagText) => {
 }
 
 const paintDetailsData = (data) => {
-    console.log(data);
     coverImage.src = `${data.coverImage}`;
     title.textContent = data.title;
     content.textContent = data.content;

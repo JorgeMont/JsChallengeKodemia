@@ -1,3 +1,5 @@
+import dateFormat from "./dateFormat.js";
+
 const createLiTag = (tagText) => {
     const liTag = document.createElement('li');
     const anchorTag = document.createElement('a');
@@ -54,7 +56,7 @@ const createCard = (cardData) => {
     divContainerNameDate.appendChild(pName);
     pName.classList.add('fw-bold');
     divContainerNameDate.appendChild(pDate);
-    pDate.textContent = `Posted on ${cardData.date}`;
+    pDate.textContent = `Posted on ${dateFormat(cardData.createdAt)}`;
     pDate.classList.add('time');
     divCardBody.appendChild(hTitle);
     hTitle.classList.add('card-title', 'ms-4');
@@ -63,7 +65,6 @@ const createCard = (cardData) => {
     // Inserting tags
     cardData.tags.forEach(tag => {
         const newli = createLiTag(tag);
-        console.log(newli);
         tagList.appendChild(newli);
     });
     divCardBody.appendChild(divContainerBtns);
