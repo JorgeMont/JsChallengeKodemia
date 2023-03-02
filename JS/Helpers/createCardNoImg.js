@@ -43,7 +43,7 @@ const createCardNoImg = (cardData) => {
     card.appendChild(imgCover);
     card.appendChild(hTitle);
     anchor.appendChild(card);
-    anchor.href = `./src/article.html?id=${cardData.id}`;
+    anchor.href = `./src/article.html?id=${cardData._id}`;
     card.appendChild(divCardBody);
     divCardBody.classList.add('card-body');
     divCardBody.appendChild(divCardUserDetails);
