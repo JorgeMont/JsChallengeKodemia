@@ -40,7 +40,6 @@ body #formPost .formPost__card input {
   border: none;
 }
 body #formPost .formPost__card input#inputTitulo {
-  color: red;
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;

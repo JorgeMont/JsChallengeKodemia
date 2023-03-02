@@ -1,15 +1,16 @@
 import postData from "./Helpers/postData.js";
 
-const apiURL = 'https://jschallengekodemia-default-rtdb.firebaseio.com/.json';
+// const apiURL = 'https://jschallengekodemia-default-rtdb.firebaseio.com/.json';
+const apiURL = 'http://localhost:3000/api/v1/posts';
 const formPost = document.querySelector('#formPost');
 const inputTitulo = document.querySelector('#inputTitulo');
 const inputContent = document.querySelector('#inputContent');
-const inputDate = document.querySelector('#inputDate');
-const inputImgUrl = document.querySelector('#inputImgUrl');
+const inputTags = document.querySelector('#inputTags');
+const inputImgUrl = document.querySelector('#inputCover');
 
 let tituloTex;
 let contentText;
-let dateText;
+let tagsText;
 let imgUrlText;
 
 const validaCampos = (infoObj) => {
@@ -30,19 +31,24 @@ inputContent.addEventListener('change',()=>{
     contentText = inputContent.value
 });
 
-inputDate.addEventListener('change',()=>{
-    dateText = inputDate.value
-});
-
 inputImgUrl.addEventListener('change',()=>{
     imgUrlText = inputImgUrl.value
 });
 
+inputTags.addEventListener('change',()=>{
+    const tags = inputTags.value.split(',');
+    tagsText = tags.map((elem) => elem.trim());
+});
+
 formPost.addEventListener('submit', (ev)=>{
-    let newEntrada = {titulo: tituloTex, content: contentText, date: dateText, coverImage: imgUrlText, tags: ['js', 'tutorial', 'code']};
+    let newEntrada = {
+        title: tituloTex, 
+        content: contentText,
+        coverImage: imgUrlText, 
+        tags: tagsText};
     ev.preventDefault();
-    // console.log(newEntrada);
-    validaCampos(newEntrada);
+    console.log(newEntrada);
+    // validaCampos(newEntrada);
     if(!validaCampos(newEntrada)){
         postData(apiURL, newEntrada);
     }
