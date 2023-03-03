@@ -1,4 +1,5 @@
 import getData from "./Helpers/getData.js";
+import deletePost from "./Helpers/deletePost.js";
 import dateFormat from "./Helpers/dateFormat.js";
 const params = new URLSearchParams(window.location.search);
 
@@ -18,10 +19,6 @@ const btnDelete = document.querySelector('#btnDelete');
 // });
 
 // btnEdit.href = `./article.html?id=${id}}`
-
-btnDelete.addEventListener('click', ()=>{
-    console.log('Delete disparado');
-});
 
 const id = params.get('id');
 const apiUrl = `http://localhost:3000/api/v1/posts/${id}`;
@@ -45,5 +42,14 @@ const paintDetailsData = (data) => {
     // btnEdit.href = `./editArticle.html?id=${_id}}`
     btnEdit.href = `./editArticle.html?id=${data._id}`
 }
+
+btnDelete.addEventListener('click', ()=>{
+    console.log('Delete disparado');
+
+    //preguntar para confirmar
+
+    //hacer el delete
+    deletePost(apiUrl);
+});
 
 getData(apiUrl, paintDetailsData);
