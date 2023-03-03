@@ -103,5 +103,13 @@ body{
         button{
             margin-left: 5rem;
         }
+
+        .ocultarAlerta{
+            display: none;
+        }
+        
+        .mostrarAlerta{
+            display: block;
+        }
     }
 }

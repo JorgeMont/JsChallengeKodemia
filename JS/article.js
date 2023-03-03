@@ -1,4 +1,5 @@
 import getData from "./Helpers/getData.js";
+import deletePost from "./Helpers/deletePost.js";
 import dateFormat from "./Helpers/dateFormat.js";
 const params = new URLSearchParams(window.location.search);
 
@@ -8,6 +9,7 @@ const title = document.querySelector('#articleTitle');
 const content = document.querySelector('#articleContenido');
 const tagsContainer = document.querySelector('#tagsContainer');
 const postDate = document.querySelector('#postDate');
+const alertaBorrado = document.querySelector('#alertaBorrado');
 
 //Para botones de edit y delete
 const btnEdit = document.querySelector('#btnEditar');
@@ -18,10 +20,6 @@ const btnDelete = document.querySelector('#btnDelete');
 // });
 
 // btnEdit.href = `./article.html?id=${id}}`
-
-btnDelete.addEventListener('click', ()=>{
-    console.log('Delete disparado');
-});
 
 const id = params.get('id');
 const apiUrl = `http://localhost:3000/api/v1/posts/${id}`;
@@ -45,5 +43,16 @@ const paintDetailsData = (data) => {
     // btnEdit.href = `./editArticle.html?id=${_id}}`
     btnEdit.href = `./editArticle.html?id=${data._id}`
 }
+
+btnDelete.addEventListener('click', ()=>{
+    console.log('Delete disparado');
+
+    //preguntar para confirmar
+
+    //hacer el delete
+    deletePost(apiUrl);
+    alertaBorrado.classList.remove('ocultarAlerta');
+    alertaBorrado.classList.add('mostrarAlerta');
+});
 
 getData(apiUrl, paintDetailsData);

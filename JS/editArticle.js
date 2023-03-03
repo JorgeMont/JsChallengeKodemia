@@ -25,6 +25,7 @@ const inputTitulo = document.querySelector('#inputTitulo');
 const inputContent = document.querySelector('#inputContent');
 const inputTags = document.querySelector('#inputTags');
 const inputImgUrl = document.querySelector('#inputCover');
+const alertaUpdate = document.querySelector('#alertaUpdate');
 
 let tituloTex;
 let contentText;
@@ -72,6 +73,8 @@ formPost.addEventListener('submit', (ev)=>{
     // validaCampos(newEntrada);
     if(!validaCampos(newEntrada)){
         patchData(apiURL, newEntrada);
+        alertaUpdate.classList.remove('ocultarAlerta');
+        alertaUpdate.classList.add('mostrarAlerta');
     }
     else{
         console.log('Datos no validos');
