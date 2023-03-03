@@ -9,6 +9,20 @@ const content = document.querySelector('#articleContenido');
 const tagsContainer = document.querySelector('#tagsContainer');
 const postDate = document.querySelector('#postDate');
 
+//Para botones de edit y delete
+const btnEdit = document.querySelector('#btnEditar');
+const btnDelete = document.querySelector('#btnDelete');
+
+// btnEdit.addEventListener('click', ()=>{
+//     console.log('Edit disparado');
+// });
+
+// btnEdit.href = `./article.html?id=${id}}`
+
+btnDelete.addEventListener('click', ()=>{
+    console.log('Delete disparado');
+});
+
 const id = params.get('id');
 const apiUrl = `http://localhost:3000/api/v1/posts/${id}`;
 
@@ -28,6 +42,8 @@ const paintDetailsData = (data) => {
         const newTag = createTag(tag);
         tagsContainer.appendChild(newTag);
     });
+    // btnEdit.href = `./editArticle.html?id=${_id}}`
+    btnEdit.href = `./editArticle.html?id=${data._id}`
 }
 
 getData(apiUrl, paintDetailsData);
