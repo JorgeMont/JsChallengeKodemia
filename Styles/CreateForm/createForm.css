@@ -81,4 +81,10 @@ body #formPost .formPost__card .mockMenu .mockMenu__options {
 }
 body #formPost button {
   margin-left: 5rem;
+}
+body #formPost .ocultarAlerta {
+  display: none;
+}
+body #formPost .mostrarAlerta {
+  display: block;
 }/*# sourceMappingURL=createForm.css.map */

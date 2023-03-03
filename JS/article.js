@@ -9,6 +9,7 @@ const title = document.querySelector('#articleTitle');
 const content = document.querySelector('#articleContenido');
 const tagsContainer = document.querySelector('#tagsContainer');
 const postDate = document.querySelector('#postDate');
+const alertaBorrado = document.querySelector('#alertaBorrado');
 
 //Para botones de edit y delete
 const btnEdit = document.querySelector('#btnEditar');
@@ -50,6 +51,8 @@ btnDelete.addEventListener('click', ()=>{
 
     //hacer el delete
     deletePost(apiUrl);
+    alertaBorrado.classList.remove('ocultarAlerta');
+    alertaBorrado.classList.add('mostrarAlerta');
 });
 
 getData(apiUrl, paintDetailsData);
