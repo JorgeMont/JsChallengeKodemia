@@ -1,0 +1,18 @@
+.btnsCRUD {
+  display: flex;
+  justify-content: end;
+  margin-right: 1rem;
+}
+.btnsCRUD .btnsCRUD__Edit, .btnsCRUD .btnsCRUD__Delete {
+  background-color: rgb(175, 175, 175);
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 5px 5px 0 0;
+  text-decoration: none;
+}
+.btnsCRUD .btnsCRUD__Edit:hover, .btnsCRUD .btnsCRUD__Delete:hover {
+  cursor: pointer;
+}
+.btnsCRUD .btnsCRUD__Delete {
+  margin-left: 0.5rem;
+}/*# sourceMappingURL=article.css.map */
