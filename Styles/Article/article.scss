@@ -1,0 +1,30 @@
+.btnsCRUD{
+    display: flex;
+    justify-content: end;
+    margin-right: 1rem;
+
+    .btnsCRUD__Edit, .btnsCRUD__Delete{
+        background-color: rgb(175, 175, 175);
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 5px 5px 0 0;
+        text-decoration: none;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .btnsCRUD__Delete{
+        margin-left: 0.5rem;
+    }
+}
+
+
+.ocultarAlerta{
+    display: none;
+}
+
+.mostrarAlerta{
+    display: block;
+}

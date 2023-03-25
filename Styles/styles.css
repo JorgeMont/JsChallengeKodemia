@@ -124,10 +124,23 @@ footer .logoContainer:hover {
 }
 
 body header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
+}
+body header #btnCreate {
+  color: #4891fc;
+  border: 1px solid #4891fc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 0.7rem;
+  text-decoration: none;
+}
+body header #btnCreate:hover {
+  cursor: pointer;
+  background-color: #0d6efd;
+  color: white;
 }
 body header nav .crayons-header__logo {
   display: flex;
@@ -171,58 +184,69 @@ body header .profilePicContainer img {
     display: none;
   }
 }
-body main .card {
+body main .cardAnchor {
+  text-decoration: none;
+  color: black;
+  padding-right: 1rem;
+}
+body main .cardAnchor:hover {
+  cursor: pointer;
+}
+body main .cardAnchor .card {
   font-size: 14px;
 }
-body main .card a {
+body main .cardAnchor .card a {
   color: black;
   text-decoration: none;
 }
-body main .card a:hover {
+body main .cardAnchor .card a:hover {
   color: #2f3ab2;
 }
-body main .card ul {
+body main .cardAnchor .card ul {
   list-style: none;
 }
-body main .card ul li a {
+body main .cardAnchor .card ul li a {
   text-decoration: none;
   color: black;
   padding: 6px;
 }
-body main .card ul li a:hover {
+body main .cardAnchor .card ul li a:hover {
   background-color: #f3f3f3;
   border-radius: 10px;
   border: 1px solid gray;
 }
-body main .card .card__buttons {
+body main .cardAnchor .card .card__buttons {
   justify-content: space-between;
 }
-body main .card .card__buttons img {
+body main .cardAnchor .card .card__buttons img {
   width: 1.5rem;
   height: 1.5rem;
 }
-body main .card .card__buttons img:hover {
+body main .cardAnchor .card .card__buttons img:hover {
   cursor: pointer;
 }
-body main .card .card__buttons p {
+body main .cardAnchor .card .card__buttons p {
   margin: 0;
 }
-body main .card .card-img-top {
+body main .cardAnchor .card .card-img-top {
   height: 15rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body main .card .card__userDetails img {
+body main .cardAnchor .card .no-mostrar-img {
+  display: none;
+}
+body main .cardAnchor .card .card__userDetails img {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   border: 1px solid gray;
   margin-right: 0.5rem;
 }
-body main .card .card__userDetails p {
+body main .cardAnchor .card .card__userDetails p {
   margin: 0;
 }
-body main .card .card__userDetails .time {
+body main .cardAnchor .card .card__userDetails .time {
   font-size: 0.75rem;
 }
 
@@ -449,7 +473,6 @@ body main .card .card__userDetails .time {
 @media screen and (min-width: 1024px) {
   .main__cards #main__column-3 #main__article {
     width: 100%;
-    position: -webkit-sticky;
     position: sticky;
     top: 75px;
   }
@@ -533,11 +556,86 @@ footer {
   color: #4550bb;
 }
 
+.post-img-icons {
+  width: 30px;
+  height: 30px;
+}
+
+.tachita {
+  width: 30px;
+  height: 30px;
+}
+
+.menu-accion-ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.form-control-post {
+  height: 220px;
+  width: 100%;
+  border: none;
+}
+
+.ul-edit-review-post {
+  list-style-type: none;
+  justify-content: center;
+  padding-right: 100px;
+  margin-right: 30px;
+}
+
+.li-edit-review-post {
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+.hover-button {
+  border: none;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+}
+
+.hover-button:hover {
+  background-color: #E2E3F3;
+  border-radius: 5px;
+}
+
+.header-post {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.aside-post {
+  height: 30%;
+}
+
+.noshow {
+  color: transparent;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.togglevista {
+  color: transparent;
+}
+
+.untogglevista {
+  color: gray;
+}
+
+#textarea-desc {
+  height: 200px;
+}
+
 body {
-  background-color: #f8f8f2;
+  background-color: #f5f5f5;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 body main {
-  background-color: #f8f8f2;
+  background-color: #f5f5f5;
 }
 body main .page-container {
   padding: 1rem;
@@ -547,7 +645,7 @@ body main .page-container .page__leftColumn {
   width: 25%;
 }
 body main .page-container .page__centerColumn {
-  width: 50%;
+  width: 48%;
 }
 body main .page-container .page__centerColumn .tabContainer:hover {
   cursor: pointer;

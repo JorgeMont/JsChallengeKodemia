@@ -1,1 +1,1 @@
-# Equipo-4
+# JavaScript Challenge Kodemia

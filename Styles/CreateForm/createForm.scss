@@ -1,0 +1,115 @@
+@import '../variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $grey-background;
+    font-family: $font-sans-serif;
+    padding: 0 5rem;
+
+    header{
+        padding: 0.5rem;
+
+        .navCreate{
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            
+            .navLogo{
+                img{
+                    width: 3rem;
+                }
+            }
+
+            p{
+                margin: 0;
+                margin-left: 1rem;
+                font-size: 1rem;
+
+            }
+        }
+    }
+
+    #formPost{
+        .formPost__card{
+            margin-left: 5rem;
+            padding: 2rem 0rem;
+            background-color: white;
+            width: 50rem;
+            border: 1px solid #e4e4e4;
+            border-radius: 5px;
+
+            display: flex;
+            flex-direction: column;
+            
+            
+
+            input{
+                padding: 0 4rem;
+                margin: 1rem 0;
+                border: none;
+
+                &#inputTitulo{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin: 0;
+
+                    &::placeholder{
+                        color: #525252;
+                    }
+                }
+
+            }
+
+            textarea{
+                margin: 1rem 0;
+                padding: 0 4rem;
+                border: none;
+                
+                
+                &::placeholder{
+                    color: gray;
+                }
+            }
+
+            .mockMenu{
+                background-color: #f9f9f9;
+                padding: 1rem 2rem;
+                display: flex;
+
+                .mockMenu__text{
+                    flex: 5;
+                    display: flex;
+                    justify-content: space-between;
+
+                    svg{
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .mockMenu__options{
+                    flex: 1;
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+
+        button{
+            margin-left: 5rem;
+        }
+
+        .ocultarAlerta{
+            display: none;
+        }
+        
+        .mostrarAlerta{
+            display: block;
+        }
+    }
+}
